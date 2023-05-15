@@ -1,0 +1,162 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: beige;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    padding: 15px 0;
+
+    text-align: center;
+    font-size: 44px;
+    font-weight: 300;
+    color: gray;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .17);
+}
+
+.header__logo {
+    color: inherit;
+    text-decoration: none;
+}
+
+.hero{
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 1230px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.hero__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+ .hero_about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero_title {
+    margin-bottom:  20px;
+    font-size: 37px;
+    line-height: 1.1;
+}
+
+.hero_subtitle {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.hero_links {
+    display: flex;
+    align-items: flex-end;
+}
+
+.hero_link {
+    margin-right: 10px;
+    font-size: 30px;
+    color: black;
+    transition: color 0.3s;
+}
+
+.hero_link:hover {
+    color: #4facfe;
+}
+
+.hero_box {
+    max-width:  500px;
+    justify-content: center;
+    overflow:  hidden;
+
+    background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+    border: 10px solid white;
+    box-shadow: 2px 5px 10px
+    rgba(0, 0, 0.5);
+
+    animation: ava-animate 5s infinite alternate;
+}
+
+.hero_box_image {
+    animation: ava-bg 3s infinite alternate;
+}
+
+.artem {
+    color: #a6c0fe;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes ava-animate {
+    0% {
+        border-radius: 100% 0% 99% 1% / 1% 100% 0% 99%   ;
+    }
+    40% {
+        border-radius: 55% 45% 49% 51% / 51% 52% 48% 49%   ;
+    }
+    60% {
+        border-radius: 16% 84% 19% 81% / 75% 21% 79% 25%   ;
+    }
+    100% {
+        border-radius: 0% 100% 0% 100% / 100% 0% 100% 0%    ;
+    }
+}
+
+@keyframes ava-bg {
+    from{
+        backdrop-filter: hue-rotate(90deg);
+    }
+}
+
+@media screen and(max-width: 978px) {
+    .hero {
+        padding-top: 30px;
+    }
+    .hero__container {
+        grid-row-gap: 20px;
+    }
+    .hero_title {
+        font-size:  28px;
+        margin-bottom: 10px;
+    }
+    .hero_subtitle {
+        font-size: 22px;
+        font-weight: 400;
+    }
+    .hero_description {
+        font-size: 14px;
+    }
+    .hero_about {
+        text-align: center;
+    }
+    .hero_links {
+        justify-content: center;
+    }
+    .hero_box {
+        max-width: 350px;
+    }
+}
