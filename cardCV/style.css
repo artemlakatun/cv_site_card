@@ -26,18 +26,35 @@ h1, h2, h3 {
     text-align: center;
     font-size: 44px;
     font-weight: 300;
-    color: gray;
+    color: gold;
     box-shadow: 0 4px 10px rgba(0, 0, 0, .17);
 }
 
 .header__logo {
     color: inherit;
     text-decoration: none;
-    transition: color 0.3s;
+    opacity: 0.2;
+    animation-name: glowing;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 
-.header__logo:hover {
-    color: #4facfe;
+@keyframes glowing {
+    0%, 100% {
+        opacity: 1;
+        filter: blur(1);
+        text-shadow: 0 0 5px #00008b,
+        0 0 10px #00008b,
+        0 0 20px #00008b,
+        0 0 30px #00008b,
+        0 0 40px #00008b,
+        0 0 50px #00008b;
+    }
+    30%, 70% {
+        opacity: 0.2;
+        filter: blur(0);
+        text-shadow: none;
+    }
 }
 
 .hero{
