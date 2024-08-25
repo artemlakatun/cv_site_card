@@ -301,6 +301,26 @@ p {
     background: #03a9f4;
 }
 
+/*softSkills*/
+
+.softSkills ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.softSkills ul li {
+    List-style: none;
+    color: #333;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.softSkills ul li i {
+    color: #03a9f4;
+    font-size: 18px;
+    width: 20px;
+}
+
 /*Interest*/
 
 .interest ul {
